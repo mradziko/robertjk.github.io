@@ -1,0 +1,34 @@
+@mixin font-smooth {
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+              font-smooth: always;
+}
+
+/* Single-line text (likely a heading) that is surrounded by horizontal rule
+   which ends at element's inner box.
+   # horizontal-offset - how far from the text the line starts appearing (px)
+   # line-width - how thick is the rule/line (px) */
+@mixin text-horizontal-rule($horizontal-offset, $line-width) {
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 50%;
+    height: $line-width;
+    background: $text-secondary-color;
+  }
+
+  &::before {
+    right: $horizontal-offset;
+    margin-left: -50%;
+  }
+
+  &::after {
+    left: $horizontal-offset;
+    margin-right: -50%;
+  }
+
+}

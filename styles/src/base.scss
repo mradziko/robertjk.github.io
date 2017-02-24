@@ -1,0 +1,76 @@
+@import "shared";
+@import "tools";
+
+
+html {
+  height: 100%;
+  font-size: 1px;  /* 10px used to easily calculate rem values */
+}
+
+body {
+  min-height: 100%;
+  color: $text-primary-color;
+  background: #3ebf49;
+  font: {
+    family: "Source Sans Pro";
+    size: 16rem;
+    weight: 400;
+  }
+  /* Font is rendered too fat on OS X without it */
+  @include font-smooth;
+}
+
+h1 {
+  text-align: center;
+  font: {
+    size: 43rem;
+    weight: 800;
+  }
+  text-transform: uppercase;
+}
+
+h2 {
+  $font-size: 14rem;
+  /* There should be 40px offset on 14px font */
+  $border-offset: #{40rem / $font-size}em;
+
+  overflow: hidden;
+  margin: 0 0 9px 0;
+  color: $text-secondary-color;
+  font: {
+    size: $font-size;
+    weight: 600;
+  }
+  text-transform: uppercase;
+  text-align: center;
+
+  @include text-horizontal-rule($border-offset, 2px);
+
+  /* Remove the horizontal rule for h2 inside footer */
+  @at-root footer h2 {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+}
+
+h3 {
+  font-size: 16rem;
+  text-align: center;
+}
+
+hgroup {
+
+  margin: 0 0 34px 0;
+
+  & > h1 {
+    margin: 0 0 5px 0;
+  }
+
+}
+
+strong {
+  font-weight: 600;
+}

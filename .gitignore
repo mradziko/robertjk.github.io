@@ -1,2 +1,4 @@
 .sass-cache/
 design.png
+*.psd
+.DS_Store

@@ -1,0 +1,45 @@
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  background: #117760; }
+  .footer h2 {
+    width: 100%;
+    margin: 0 0 -15px;
+    color: inherit;
+    font-family: "PFBeauSansPro";
+    font-size: 24rem;
+    font-weight: 700;
+    text-transform: none;
+    text-align: inherit; }
+  .footer h3 {
+    flex: 1 0 auto;
+    /* To always align navigation to the right */
+    margin: 19px 50px 0 0;
+    font-family: "Myriad Pro";
+    font-size: 16rem;
+    font-weight: 400;
+    text-align: inherit; }
+
+.footer_navigation {
+  margin: 19px 0 0; }
+
+.footer_navigation-list > li {
+  display: inline-block; }
+.footer_navigation-list > li + li {
+  margin-left: 36px; }
+
+.footer_navigation-link {
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.footer_note {
+  border-top: 2px solid #0c5645;
+  margin: 24px 0 0;
+  padding: 24px 0 0;
+  font-family: "Myriad Pro";
+  font-size: 11rem;
+  line-height: 1.63636em; }
+
+/*# sourceMappingURL=footer.css.map */

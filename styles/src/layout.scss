@@ -1,0 +1,50 @@
+@import "shared";
+
+
+$header-height: 90px;
+$main-horizontal-padding: 157px;
+
+
+.layout-body {
+  $actual-padding-top: 30px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  padding: $header-height 0 0;
+}
+
+.layout-header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+}
+
+.layout-page-footer {
+  order: 2;
+  height: 527px;
+  padding: 31px $main-horizontal-padding
+}
+
+.layout-footer-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 115px;
+}
+
+.layout-main {
+  order: 1;
+  flex: 1;  /* To always fill at least the whole page height */
+  padding: 30px $main-horizontal-padding 0;
+}
+
+.layout-popup {
+  position: fixed;
+  z-index: 1;
+  top: 28px + $header-height;
+  right: 17px;
+}

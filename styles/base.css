@@ -1,0 +1,67 @@
+/* Single-line text (likely a heading) that is surrounded by horizontal rule
+   which ends at element's inner box.
+   # horizontal-offset - how far from the text the line starts appearing (px)
+   # line-width - how thick is the rule/line (px) */
+html {
+  height: 100%;
+  font-size: 1px;
+  /* 10px used to easily calculate rem values */ }
+
+body {
+  min-height: 100%;
+  color: #ffffff;
+  background: #3ebf49;
+  font-family: "Source Sans Pro";
+  font-size: 16rem;
+  font-weight: 400;
+  /* Font is rendered too fat on OS X without it */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always; }
+
+h1 {
+  text-align: center;
+  font-size: 43rem;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+h2 {
+  /* There should be 40px offset on 14px font */
+  overflow: hidden;
+  margin: 0 0 9px 0;
+  color: #9ff142;
+  font-size: 14rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  /* Remove the horizontal rule for h2 inside footer */ }
+  h2::before, h2::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 50%;
+    height: 2px;
+    background: #9ff142; }
+  h2::before {
+    right: 2.85714em;
+    margin-left: -50%; }
+  h2::after {
+    left: 2.85714em;
+    margin-right: -50%; }
+  footer h2::after, footer h2::before {
+    display: none; }
+
+h3 {
+  font-size: 16rem;
+  text-align: center; }
+
+hgroup {
+  margin: 0 0 34px 0; }
+  hgroup > h1 {
+    margin: 0 0 5px 0; }
+
+strong {
+  font-weight: 600; }
+
+/*# sourceMappingURL=base.css.map */

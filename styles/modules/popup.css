@@ -1,0 +1,15 @@
+.popup {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 343px;
+  padding: 13px 40px 16px 85px;
+  border-radius: 10px;
+  color: #ffffff;
+  background: url("../../images/people-icon.png") left 20px top 14px no-repeat #0a7f5d;
+  font-weight: 300;
+  line-height: 1.25em; }
+
+/*# sourceMappingURL=popup.css.map */

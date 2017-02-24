@@ -1,0 +1,26 @@
+.footer-popup {
+  display: flex;
+  z-index: 1;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #228570;
+  opacity: 0.9;
+  font-size: 24rem;
+  font-weight: 300; }
+
+.footer-popup_content {
+  position: relative;
+  /* To relatively position it's child pseudo element */
+  top: -8px; }
+  .footer-popup_content::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -127px;
+    top: -4px;
+    width: 100px;
+    height: 39px;
+    background: url("../../images/bus-icon.png") left center no-repeat; }
+
+/*# sourceMappingURL=footer-popup.css.map */

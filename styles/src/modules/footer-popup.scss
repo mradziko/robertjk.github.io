@@ -1,0 +1,37 @@
+@import "shared";
+
+
+.footer-popup {
+  display: flex;
+  z-index: 1;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #228570;
+  opacity: 0.9;
+  font: {
+    size: 24rem;
+    weight: 300;
+  }
+}
+
+.footer-popup_content{
+
+  position: relative;  /* To relatively position it's child pseudo element */
+  top: -8px;
+
+  &::before {
+    $image-width: 100px;
+    $image-height: 39px;
+
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -$image-width - 27px;
+    top: -4px;
+    width: $image-width;
+    height: $image-height;
+    background: url("../#{$images-dir}/bus-icon.png") left  center no-repeat;
+  }
+
+}

@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 52px 0 0;
+  background: url("../../images/smf-logo.png") 23px 18px no-repeat #ff540e;
+  font-size: 22rem; }
+
+.header_link {
+  /* Padding set to make room for the icon image to be displayed. */
+  padding: 6px 0;
+  color: inherit;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-position: left center;
+  text-decoration: none; }
+  .header_link.header_link-login {
+    margin-left: 17px;
+    padding-left: 79px;
+    background-image: url("../../images/glasses-icon.png");
+    margin-left: 0; }
+  .header_link.header_link-help {
+    margin-left: 50px;
+    padding-left: 46px;
+    background-image: url("../../images/help-icon.png"); }
+
+/*# sourceMappingURL=header.css.map */

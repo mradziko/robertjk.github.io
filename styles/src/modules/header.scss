@@ -1,0 +1,44 @@
+@import "shared";
+
+
+@mixin icon-image($image-url, $image-width) {
+  margin-left: (83px - $image-width);
+  padding-left: $image-width + 13px;
+  background: {
+    image: $image-url;
+  }
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 52px 0 0;
+  background: url("../#{$images-dir}/smf-logo.png") 23px 18px no-repeat #ff540e;
+  font-size: 22rem;
+}
+
+.header_link {
+
+  /* Padding set to make room for the icon image to be displayed. */
+  padding: 6px 0;
+  color: inherit;
+  background: {
+    repeat: no-repeat;
+    origin: padding-box;
+    position: left center;
+  }
+  text-decoration: none;
+
+  &.header_link-login {
+    @include icon-image(url("../#{$images-dir}/glasses-icon.png"), 66px);
+    margin-left: 0;
+  }
+
+  &.header_link-help {
+    @include icon-image(url("../#{$images-dir}/help-icon.png"), 33px);
+  }
+
+}

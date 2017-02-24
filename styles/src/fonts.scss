@@ -1,0 +1,50 @@
+$fonts-dir: "../fonts";
+
+
+/*** Source Sans Pro ***/
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  src: url("#{$fonts-dir}/source-sans-pro/SourceSansPro-Light.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  src: url("#{$fonts-dir}/source-sans-pro/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  src: url("#{$fonts-dir}/source-sans-pro/SourceSansPro-Semibold.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  src: url("#{$fonts-dir}/source-sans-pro/SourceSansPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 800;
+  src: url("#{$fonts-dir}/source-sans-pro/SourceSansPro-Black.ttf");
+}
+
+/*** Myriad Pro ***/
+
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 400;
+  src: url("#{$fonts-dir}/myriad-pro/Myriad-Pro-Regular.ttf");
+}
+
+/*** PFBeauSansPro ***/
+
+@font-face {
+  font-family: "PFBeauSansPro";
+  font-weight: 400;
+  src: url("#{$fonts-dir}/pf-beau-sans-pro/pfbeausanspro-regular.ttf");
+}

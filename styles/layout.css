@@ -1,0 +1,38 @@
+.layout-body {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 90px 0 0; }
+
+.layout-header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px; }
+
+.layout-page-footer {
+  order: 2;
+  height: 527px;
+  padding: 31px 157px; }
+
+.layout-footer-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 115px; }
+
+.layout-main {
+  order: 1;
+  flex: 1;
+  /* To always fill at least the whole page height */
+  padding: 30px 157px 0; }
+
+.layout-popup {
+  position: fixed;
+  z-index: 1;
+  top: 118px;
+  right: 17px; }
+
+/*# sourceMappingURL=layout.css.map */
