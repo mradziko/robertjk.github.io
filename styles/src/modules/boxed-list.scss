@@ -8,7 +8,7 @@ $elements-spacing: 6px;
 .boxed-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   /* To compensate for left and bottom margins of elements */
   width: calc(100% + #{$elements-spacing});
   margin: 0 0 (-$elements-spacing) (-$elements-spacing);
