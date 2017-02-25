@@ -1,0 +1,21 @@
+// List whose elements are rectangular boxes stacked in rows
+
+
+$elements-spacing: 6px;
+
+
+/* The whole list */
+.boxed-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* To compensate for left and bottom margins of elements */
+  width: calc(100% + #{$elements-spacing});
+  margin: 0 0 (-$elements-spacing) (-$elements-spacing);
+  padding: 0 0 $elements-spacing 0;
+}
+
+/* One element of the list */
+.boxed-list_element {
+  margin: 0 0 $elements-spacing $elements-spacing;
+}

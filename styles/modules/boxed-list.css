@@ -1,0 +1,15 @@
+/* The whole list */
+.boxed-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* To compensate for left and bottom margins of elements */
+  width: calc(100% + 6px);
+  margin: 0 0 -6px -6px;
+  padding: 0 0 6px 0; }
+
+/* One element of the list */
+.boxed-list_element {
+  margin: 0 0 6px 6px; }
+
+/*# sourceMappingURL=boxed-list.css.map */
