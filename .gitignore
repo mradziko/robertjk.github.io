@@ -2,3 +2,4 @@
 design.png
 *.psd
 .DS_Store
+*.css.map
