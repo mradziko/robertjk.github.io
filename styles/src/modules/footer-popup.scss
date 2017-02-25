@@ -1,6 +1,10 @@
+/* Popup which appears as a fixed footer on the bottom of the screen. */
+
+
 @import "shared";
 
 
+/* The whole footer container. */
 .footer-popup {
   display: flex;
   z-index: 1;
@@ -15,6 +19,7 @@
   }
 }
 
+/* Main content of the footer. */
 .footer-popup_content{
 
   position: relative;  /* To relatively position it's child pseudo element */

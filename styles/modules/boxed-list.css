@@ -1,3 +1,4 @@
+/* List whose elements are rectangular boxes stacked in rows */
 /* The whole list */
 .boxed-list {
   display: flex;
