@@ -4,10 +4,10 @@
               font-smooth: always;
 }
 
-/* Single-line text (likely a heading) that is surrounded by horizontal rule
-   which ends at element's inner box.
-   # horizontal-offset - how far from the text the line starts appearing (px)
-   # line-width - how thick is the rule/line (px) */
+// Single-line text (likely a heading) that is surrounded by horizontal rule
+// which ends at element's inner box.
+// # horizontal-offset - how far from the text the line starts appearing (px)
+// # line-width - how thick is the rule/line (px)
 @mixin text-horizontal-rule($horizontal-offset, $line-width) {
 
   &::before,
