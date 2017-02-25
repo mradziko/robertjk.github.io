@@ -1,6 +1,7 @@
 @import "shared";
 
 
+// Icon image for the link
 @mixin icon-image($image-url, $image-width) {
   margin-left: (83px - $image-width);
   padding-left: $image-width + 13px;
@@ -9,16 +10,24 @@
   }
 }
 
+
 .header {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
+  flex-flow: row wrap;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 52px 0 0;
-  background: url("../#{$images-dir}/smf-logo.png") 23px 18px no-repeat #ff540e;
+  padding: 25px 52px 25px 39px;
+  background: #ff540e;
   font-size: 22rem;
 }
+
+
+.header_logo {
+  position: relative;
+  top: 7px;
+  left: -17px;
+}
+
 
 .header_link {
 
@@ -34,11 +43,29 @@
 
   &.header_link-login {
     @include icon-image(url("../#{$images-dir}/glasses-icon.png"), 66px);
-    margin-left: 0;
+    margin-left: auto;
   }
 
   &.header_link-help {
     @include icon-image(url("../#{$images-dir}/help-icon.png"), 33px);
+  }
+
+}
+
+
+@media (max-width: $header-max-width-breakpoint) {
+
+  .header {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .header_link {
+    width: 100%;
+    margin: 8px 0 0 0 !important;
+    padding-left: 0 !important;
+    background-image: none !important;
   }
 
 }

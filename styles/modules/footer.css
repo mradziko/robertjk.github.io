@@ -1,3 +1,5 @@
+/* Top margin of links section, used only when the screen is small enough so text-horizontal-rule
+   links collapse to the next line. */
 .footer {
   display: flex;
   flex-flow: row wrap;
@@ -13,7 +15,7 @@
     text-transform: none;
     text-align: inherit; }
   .footer h3 {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     /* To always align navigation to the right */
     margin: 19px 50px 0 0;
     font-family: "Myriad Pro";
@@ -24,10 +26,13 @@
 .footer_navigation {
   margin: 19px 0 0; }
 
-.footer_navigation-list > li {
-  display: inline-block; }
-.footer_navigation-list > li + li {
-  margin-left: 36px; }
+.footer_navigation-list {
+  display: flex;
+  flex-flow: row nowrap; }
+  .footer_navigation-list > li {
+    display: inline-block; }
+  .footer_navigation-list > li + li {
+    margin-left: 36px; }
 
 .footer_navigation-link {
   color: inherit;
@@ -41,5 +46,14 @@
   font-family: "Myriad Pro";
   font-size: 11rem;
   line-height: 1.63636em; }
+
+@media (max-width: 650px) {
+  .footer h3 {
+    margin-top: 29px; }
+
+  .footer_navigation-list {
+    flex-flow: column nowrap; }
+    .footer_navigation-list > li + li {
+      margin: 15px 0 0; } }
 
 /*# sourceMappingURL=footer.css.map */

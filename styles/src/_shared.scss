@@ -3,6 +3,10 @@ $images-dir: "../images";
 $text-primary-color: #ffffff;
 $text-secondary-color: #9ff142;
 
+// The width of the screen under which header switches to alternative layout
+// for smaller screens
+$header-max-width-breakpoint: 620px;
+
 
 // Close button as a small circle in the top right corner
 @mixin close-button($background-color, $cross-mark-color) {

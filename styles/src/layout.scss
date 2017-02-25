@@ -3,6 +3,7 @@
 
 $header-height: 90px;
 $main-horizontal-padding: 157px;
+$main-horizontal-padding-small-screens: 60px;
 
 
 .layout-body {
@@ -43,8 +44,28 @@ $main-horizontal-padding: 157px;
 }
 
 .layout-popup {
+
+  $top-offset: 28px;
+  $header-alternative-height: 202px;
+
   position: fixed;
   z-index: 1;
-  top: 28px + $header-height;
+  top: $top-offset + $header-height;
   right: 17px;
+
+  @media (max-width: $header-max-width-breakpoint) {
+    top: $top-offset + $header-alternative-height;
+  }
+
+}
+
+
+@media (max-width: 1150px) {
+
+  .layout-main,
+  .layout-page-footer {
+    padding-left: $main-horizontal-padding-small-screens;
+    padding-right: $main-horizontal-padding-small-screens;
+  }
+
 }

@@ -1,4 +1,6 @@
-$navigation-margin-top: 19px;
+/* Top margin of links section, used only when the screen is small enough so text-horizontal-rule
+   links collapse to the next line. */
+$links-vertical-spacing: 19px;
 
 
 .footer {
@@ -10,7 +12,7 @@ $navigation-margin-top: 19px;
 
   h2 {
     width: 100%;
-    margin: 0 0 -#{$navigation-margin-top - 4px};
+    margin: 0 0 -#{$links-vertical-spacing - 4px};
     color: inherit;
     font: {
       family: "PFBeauSansPro";
@@ -22,8 +24,8 @@ $navigation-margin-top: 19px;
   }
 
   h3 {
-    flex: 1 0 auto;  /* To always align navigation to the right */
-    margin: $navigation-margin-top 50px 0 0;
+    flex: 1 1 auto;  /* To always align navigation to the right */
+    margin: $links-vertical-spacing 50px 0 0;
     font: {
       family: "Myriad Pro";
       size: 16rem;
@@ -34,11 +36,16 @@ $navigation-margin-top: 19px;
 
 }
 
+
 .footer_navigation {
-  margin: $navigation-margin-top 0 0;
+  margin: $links-vertical-spacing 0 0;
 }
 
+
 .footer_navigation-list {
+
+  display: flex;
+  flex-flow: row nowrap;
 
   & > li {
     display: inline-block;
@@ -50,11 +57,13 @@ $navigation-margin-top: 19px;
 
 }
 
+
 .footer_navigation-link {
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
 }
+
 
 .footer_note {
   border-top: 2px solid #0c5645;
@@ -65,4 +74,22 @@ $navigation-margin-top: 19px;
     size: 11rem;
   }
   line-height: #{(36px / 22px)}em;
+}
+
+
+@media (max-width: 650px) {
+
+  .footer h3 {
+    margin-top: $links-vertical-spacing + 10px;
+  }
+
+  .footer_navigation-list {
+
+    flex-flow: column nowrap;
+
+    & > li + li {
+      margin: 15px 0 0;
+    }
+  }
+
 }
