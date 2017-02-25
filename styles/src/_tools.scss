@@ -32,3 +32,12 @@
   }
 
 }
+
+
+// Draws an element into circle. Optional background may be given.
+@mixin circle($radius, $background: transparent) {
+  height: 2 * $radius;
+  width: 2 * $radius;
+  border-radius: $radius;
+  background: $background;
+}

@@ -1,0 +1,132 @@
+/* A box presenting an offer from one of the hotels. */
+
+
+@import "shared";
+@import "tools";
+
+
+$gallery-height: 221px;
+
+
+.hotel-offer {
+  position: relative;  /* To absolutely position the gallery. */
+  box-sizing: border-box;
+  width: 369px;
+  height: 368px;
+  padding: ($gallery-height + 12px) 17px 21px;
+  color: #292929;
+  background: #ffffff;
+}
+
+
+.hotel-offer_gallery {
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $gallery-height;
+
+  &,
+  &.photo-gallery {
+    /* Additional class in selector needed to overwrite styles from
+       .photo-gallery module */
+    position: absolute;
+  }
+
+}
+
+
+.hotel-offer_name {
+  font: {
+    size: 20rem;
+    weight: 300;
+  }
+  text-align: left;
+}
+
+
+.hotel-offer_distance {
+  font: {
+    size: 14rem;
+    weight: 600;
+  }
+}
+
+
+.hotel-offer_price {
+  position: absolute;
+  top: $gallery-height + 10px;
+  right: 6px;
+  border: 1px solid #e7e9eb;
+  border-radius: 2.5px;
+  padding: 5px 7px 6px;
+  color: #45bd4f;
+  font-size: 20rem;
+}
+
+
+.hotel-offer_price-old {
+  font-family: "Myriad Pro";
+  text-decoration: line-through;
+}
+
+
+.hotel-offer_price-new {
+  font-weight: 700;
+}
+
+
+.hotel-offer_price-pricing {
+  display: block;
+  color: #9a9a9a;
+  font: {
+    family: "Myriad Pro";
+    size: 11rem;
+  }
+  text-transform: uppercase;
+  text-align: right;
+}
+
+
+.hotel-offer_discount {
+
+  @include circle(32px, #fc5524);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 11px;
+  left: 17px;
+  color: #ffffff;
+  font: {
+    size: 24rem;
+    weight: 600;
+  }
+
+}
+
+
+.hotel-offer_tripadvisor-info {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 18px 0 0;
+  font-size: 13rem;
+}
+
+
+.hotel-offer_tripadvisor-rating-stars {
+  font-size: 12rem;
+  letter-spacing: 0.1em;
+}
+
+.hotel-offer_tripadvisor-rating-description {
+  margin: 0 0 3px 2px;
+}
+
+
+.hotel-offer_tripadvisor-reviews-count {
+  width: 100%;
+  padding: 0 0 0 24px;
+  background: url("../#{$images-dir}/tripadvisor-icon.png") left center no-repeat;
+}

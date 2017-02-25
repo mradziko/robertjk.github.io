@@ -1,0 +1,78 @@
+/* Gallery of photos, which you view one at at a time.
+   2 containers are needed to be able to animate the photo change - the inner
+   container is moved (positioned) in relation to the outer one. */
+
+
+@import "shared";
+
+
+$control-spacing: 4px;
+
+
+/* Container for the whole gallery. */
+.photo-gallery {
+  position: relative;  /* To relatively position the child. */
+  overflow: hidden;
+}
+
+
+/* List of photos nested in the top container. */
+.photo-gallery_photo-list {
+  $transition-duration: 500ms;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 100%;
+  transition: left $transition-duration,
+              right $transition-duration;
+}
+
+
+/* One photo in the gallery */
+.photo-gallery_photo {
+
+  display: flex;
+  align-items: center;
+  flex: 0 0 100%;
+
+  & > img {
+    /* The image is proportionally scaled to fill the container */
+    width: 100%;
+  }
+
+}
+
+
+/* Controls which image to show. */
+.photo-gallery_control {
+  
+  $height: 32px;
+
+  position: absolute;
+  top: calc(50% - #{$height / 2});
+  border: none;
+  height: $height;
+  width: 32px;
+  color: transparent;
+  background: url("../#{$images-dir}/arrow-left.png") left center no-repeat;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+
+.photo-gallery_control-next {
+  left: $control-spacing;
+}
+
+
+.photo-gallery_control-previous {
+  right: $control-spacing;
+  transform: rotate(180deg);  /* Mirror the arrow image. */
+}

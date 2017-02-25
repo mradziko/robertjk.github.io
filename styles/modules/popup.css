@@ -13,14 +13,14 @@
   line-height: 1.25em; }
 
 .popup_close {
-  content: "";
-  position: absolute;
-  top: 6px;
-  right: 6px;
   height: 16px;
   width: 16px;
   border-radius: 8px;
   background: #11644b;
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
   color: #45bd4f; }
 
 /*# sourceMappingURL=popup.css.map */
