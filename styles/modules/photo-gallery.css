@@ -38,11 +38,13 @@
   background: url("../../images/arrow-left.png") left center no-repeat; }
   .photo-gallery_control:hover {
     cursor: pointer; }
-
-.photo-gallery_control-next {
-  left: 4px; }
+  .photo-gallery_control:focus {
+    outline: none; }
 
 .photo-gallery_control-previous {
+  left: 4px; }
+
+.photo-gallery_control-next {
   right: 4px;
   transform: rotate(180deg);
   /* Mirror the arrow image. */ }

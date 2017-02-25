@@ -49,7 +49,7 @@ $control-spacing: 4px;
 
 /* Controls which image to show. */
 .photo-gallery_control {
-  
+
   $height: 32px;
 
   position: absolute;
@@ -64,15 +64,19 @@ $control-spacing: 4px;
     cursor: pointer;
   }
 
-}
+  &:focus {
+    outline: none;
+  }
 
-
-.photo-gallery_control-next {
-  left: $control-spacing;
 }
 
 
 .photo-gallery_control-previous {
+  left: $control-spacing;
+}
+
+
+.photo-gallery_control-next {
   right: $control-spacing;
   transform: rotate(180deg);  /* Mirror the arrow image. */
 }
