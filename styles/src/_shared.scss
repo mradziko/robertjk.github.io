@@ -2,3 +2,19 @@ $images-dir: "../images";
 
 $text-primary-color: #ffffff;
 $text-secondary-color: #9ff142;
+
+
+// Close button as a small circle in the top right corner
+@mixin close-button($background-color, $cross-mark-color) {
+  $circle-radius: 8px;
+
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  height: 2 * $circle-radius;
+  width: 2 * $circle-radius;
+  border-radius: $circle-radius;
+  background: $background-color;
+  color: $cross-mark-color;
+}
