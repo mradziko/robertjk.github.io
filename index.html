@@ -102,20 +102,20 @@
         <script id="hotel-offers-template" type="x-tmpl-mustache">
           <ul class="boxed-list">
             {{# hotels }}
-              <li class="boxed-list_element">
-                <a href="{{ tripadvisor_url }}" class="hotel-offer">
-                  <div class="hotel-offer_gallery photo-gallery">
-                    <ul class="photo-gallery_photo-list">
-                      {{# photos }}
-                        <li class="photo-gallery_photo">
-                          <img class="hotel-offer_photo" alt="Photo of the hotel room"
-                               src="{{ photo_url }}" />
-                        </li>
-                      {{/ photos }}
-                    </ul>
-                    <button class="photo-gallery_control-next photo-gallery_control">Next</button>
-                    <button class="photo-gallery_control-previous photo-gallery_control">Previous</button>
-                  </div>
+              <li class="hotel-offer boxed-list_element">
+                <div class="hotel-offer_gallery photo-gallery">
+                  <ul class="photo-gallery_photo-list">
+                    {{# photos }}
+                      <li class="photo-gallery_photo">
+                        <img class="hotel-offer_photo" alt="Photo of the hotel room"
+                             src="{{ photo_url }}" />
+                      </li>
+                    {{/ photos }}
+                  </ul>
+                  <button class="photo-gallery_control-next photo-gallery_control">Next</button>
+                  <button class="photo-gallery_control-previous photo-gallery_control">Previous</button>
+                </div>
+                <a href="{{ tripadvisor_url }}">
                   <div class="hotel-offer_heading">
                     <div class="hotel-offer_main-info">
                       <h3 class="hotel-offer_name">{{ name }}</h3>
