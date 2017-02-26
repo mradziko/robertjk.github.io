@@ -6,6 +6,8 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  padding-top: 45px;
+  padding-bottom: 46px;
   background: #228570;
   opacity: 0.9;
   font-size: 24rem;
@@ -15,7 +17,8 @@
 .footer-popup_content {
   position: relative;
   /* To relatively position it's child pseudo element */
-  top: -8px; }
+  top: -8px;
+  /* Image displayed next to the content. */ }
   .footer-popup_content::before {
     content: "";
     display: inline-block;
@@ -25,5 +28,13 @@
     width: 100px;
     height: 39px;
     background: url("../../images/bus-icon.png") left center no-repeat; }
+
+@media (max-width: 1100px) {
+  .footer-popup {
+    padding-top: 89px; }
+
+  .footer-popup_content::before {
+    top: -44px;
+    left: calc(50% - 50px); } }
 
 /*# sourceMappingURL=footer-popup.css.map */

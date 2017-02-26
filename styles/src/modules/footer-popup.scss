@@ -4,6 +4,11 @@
 @import "shared";
 
 
+$padding-top: 45px;
+$image-width: 100px;
+$image-height: 39px;
+
+
 /* The whole footer container. */
 .footer-popup {
   display: flex;
@@ -11,12 +16,17 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  padding: {
+    top: $padding-top;
+    bottom: 46px;
+  }
   background: #228570;
   opacity: 0.9;
   font: {
     size: 24rem;
     weight: 300;
   }
+
 }
 
 /* Main content of the footer. */
@@ -25,10 +35,8 @@
   position: relative;  /* To relatively position it's child pseudo element */
   top: -8px;
 
+  /* Image displayed next to the content. */
   &::before {
-    $image-width: 100px;
-    $image-height: 39px;
-
     content: "";
     display: inline-block;
     position: absolute;
@@ -37,6 +45,22 @@
     width: $image-width;
     height: $image-height;
     background: url("../#{$images-dir}/bus-icon.png") left  center no-repeat;
+  }
+
+}
+
+
+@media (max-width: 1100px) {
+
+  $image-offset: $image-height + 5px;
+
+  .footer-popup {
+    padding-top: $padding-top + $image-offset;
+  }
+
+  .footer-popup_content::before {
+    top: -$image-offset;
+    left: calc(50% - #{$image-width / 2});
   }
 
 }

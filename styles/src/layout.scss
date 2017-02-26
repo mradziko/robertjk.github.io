@@ -34,7 +34,10 @@ $main-horizontal-padding-small-screens: 60px;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 115px;
+  padding: {
+    left: $main-horizontal-padding;
+    right: $main-horizontal-padding;
+  }
 }
 
 .layout-main {
@@ -63,7 +66,8 @@ $main-horizontal-padding-small-screens: 60px;
 @media (max-width: 1150px) {
 
   .layout-main,
-  .layout-page-footer {
+  .layout-page-footer,
+  .layout-footer-popup {
     padding-left: $main-horizontal-padding-small-screens;
     padding-right: $main-horizontal-padding-small-screens;
   }
