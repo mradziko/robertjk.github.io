@@ -13,8 +13,7 @@
 
 .layout-page-footer {
   order: 2;
-  height: 527px;
-  padding: 31px 157px; }
+  padding: 31px 157px 150px; }
 
 .layout-footer-popup {
   position: fixed;
@@ -42,6 +41,9 @@
 
   .layout-popup {
     top: 230px; } }
+@media (max-width: 1100px) {
+  .layout-page-footer {
+    padding-bottom: 220px; } }
 @media (max-width: 1150px) {
   .layout-main,
   .layout-page-footer,

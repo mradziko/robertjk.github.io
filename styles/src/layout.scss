@@ -27,8 +27,7 @@ $popup-top-offset: 28px;
 
 .layout-page-footer {
   order: 2;
-  height: 527px;
-  padding: 31px $main-horizontal-padding
+  padding: 31px $main-horizontal-padding 150px;
 }
 
 .layout-footer-popup {
@@ -49,8 +48,6 @@ $popup-top-offset: 28px;
 }
 
 .layout-popup {
-
-
   position: fixed;
   z-index: 1;
   top: $popup-top-offset + $header-height;
@@ -66,6 +63,14 @@ $popup-top-offset: 28px;
 
   .layout-popup {
     top: $popup-top-offset + $header-height-smaller-screens;
+  }
+
+}
+
+@media (max-width: $footer-popup-max-width-breakpoint) {
+
+  .layout-page-footer {
+    padding-bottom: 220px;
   }
 
 }

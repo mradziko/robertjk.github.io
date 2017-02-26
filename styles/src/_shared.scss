@@ -6,6 +6,7 @@ $images-dir: "../images";
 $text-primary-color: #ffffff;
 $text-secondary-color: #9ff142;
 
-// The width of the screen under which header switches to alternative layout
-// for smaller screens
-$header-max-width-breakpoint: 620px;
+// The breakpoints for width of the screen under which some elements switch to
+// alternative layout for smaller screens
+$header-max-width-breakpoint: 620px;  // Header
+$footer-popup-max-width-breakpoint: 1100px;  // Footer popup
