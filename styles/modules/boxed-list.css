@@ -1,9 +1,14 @@
 /* List whose elements are rectangular boxes stacked in rows */
-/* The whole list */
+/* Container for the list. Necesarry to center the list. */
 .boxed-list {
   display: flex;
+  justify-content: center; }
+
+/* The whole list */
+.boxed-list_list {
+  display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
   /* To compensate for left and bottom margins of elements */
   width: calc(100% + 6px);
   margin: 0 0 -6px -6px;

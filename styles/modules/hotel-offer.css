@@ -19,6 +19,14 @@
        .photo-gallery module */
     position: absolute; }
 
+.hotel-offer_heading {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start; }
+
+.hotel-offer_main-info {
+  flex: 0 1 auto; }
+
 .hotel-offer_name {
   font-size: 20rem;
   font-weight: 300;
@@ -29,12 +37,14 @@
   font-weight: 600; }
 
 .hotel-offer_price {
-  position: absolute;
-  top: 231px;
-  right: 6px;
+  flex: 0 0 auto;
+  position: relative;
+  top: -3px;
+  right: -11px;
   border: 1px solid #e7e9eb;
   border-radius: 2.5px;
-  padding: 5px 7px 6px;
+  margin-left: auto;
+  padding: 5px 7px 6px 9px;
   color: #45bd4f;
   font-size: 20rem; }
 
@@ -85,5 +95,9 @@
   width: 100%;
   padding: 0 0 0 24px;
   background: url("../../images/tripadvisor-icon.png") left center no-repeat; }
+  @media (max-width: 500px) {
+    .hotel-offer_tripadvisor-reviews-count {
+      margin-left: 12px;
+      width: auto; } }
 
 /*# sourceMappingURL=hotel-offer.css.map */

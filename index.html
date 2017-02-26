@@ -96,9 +96,9 @@
 
       <section>
         <h2>Hot Deals</h2>
-        <div id="hotel-offers-hot"></div>
+        <div id="hotel-offers-hot" class="boxed-list"></div>
         <script id="hotel-offers-template" type="x-tmpl-mustache">
-          <ul class="boxed-list">
+          <ul class="boxed-list_list">
           {{# hotels }}
             <li class="hotel-offer boxed-list_element">
               <div class="hotel-offer_gallery photo-gallery">
@@ -113,12 +113,16 @@
                 <button class="photo-gallery_control-next photo-gallery_control">Next</button>
                 <button class="photo-gallery_control-previous photo-gallery_control">Previous</button>
               </div>
-              <h3 class="hotel-offer_name">{{ name }}</h3>
-              <div class="hotel-offer_distance">1.6 KM ➔ SMF</div>
-              <div class="hotel-offer_price">
-                <span class="hotel-offer_price-old">$232</span>
-                <span class="hotel-offer_price-new">$193</span>
-                <span class="hotel-offer_price-pricing">Nightly</span>
+              <div class="hotel-offer_heading">
+                <div class="hotel-offer_main-info">
+                  <h3 class="hotel-offer_name">{{ name }}</h3>
+                  <p class="hotel-offer_distance">1.6 KM ➔ SMF</p>
+                </div>
+                <div class="hotel-offer_price">
+                  <span class="hotel-offer_price-old">$232</span>
+                  <span class="hotel-offer_price-new">$193</span>
+                  <span class="hotel-offer_price-pricing">Nightly</span>
+                </div>
               </div>
               <div class="hotel-offer_discount">-30%</div>
               <div class="hotel-offer_tripadvisor-info">
