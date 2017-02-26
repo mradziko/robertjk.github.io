@@ -1,14 +1,9 @@
 /* List whose elements are rectangular boxes stacked in rows */
-/* Container for the list. Necesarry to center the list. */
+/* The whole list */
 .boxed-list {
   display: flex;
-  justify-content: center; }
-
-/* The whole list */
-.boxed-list_list {
-  display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   /* To compensate for left and bottom margins of elements */
   width: calc(100% + 6px);
   margin: 0 0 -6px -6px;
@@ -17,5 +12,12 @@
 /* One element of the list */
 .boxed-list_element {
   margin: 0 0 6px 6px; }
+
+/* Empty element that makes sure that the last row of the flexbox container is
+   filled, so that the actually visible items nicely align to the left. */
+.boxed-list_element-dummy {
+  margin: 0 !important;
+  height: 0 !important;
+  padding: 0 !important; }
 
 /*# sourceMappingURL=boxed-list.css.map */
