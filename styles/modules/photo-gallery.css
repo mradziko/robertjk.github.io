@@ -29,14 +29,23 @@
 
 /* Controls which image to show. */
 .photo-gallery_control {
-  /* Hide by default and show only if JavaScript setups properly. */
+  /* Hide by default and show only if JavaScript setups properly and sets
+     enabled class on gallery element. */
   display: none;
   position: absolute;
   top: calc(50% - 16px);
   height: 32px;
   width: 32px;
   color: transparent;
-  background: url("../../images/arrow-left.png") left center no-repeat; }
+  background: url("../../images/arrow-left.png") left center no-repeat;
+  transition: opacity 100ms linear, visibility 100ms; }
+  .photo-gallery_is-enabled .photo-gallery_control {
+    display: inline-block; }
+
+.photo-gallery_is-first-photo .photo-gallery_control-previous,
+.photo-gallery_is-last-photo .photo-gallery_control-next {
+  visibility: hidden;
+  opacity: 0; }
 
 .photo-gallery_control-previous {
   left: 4px; }

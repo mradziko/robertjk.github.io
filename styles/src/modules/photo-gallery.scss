@@ -52,7 +52,8 @@ $control-spacing: 4px;
 
   $height: 32px;
 
-  /* Hide by default and show only if JavaScript setups properly. */
+  /* Hide by default and show only if JavaScript setups properly and sets
+     enabled class on gallery element. */
   display: none;
   position: absolute;
   top: calc(50% - #{$height / 2});
@@ -61,7 +62,21 @@ $control-spacing: 4px;
   color: transparent;
   background: url("../#{$images-dir}/arrow-left.png") left center no-repeat;
 
+  $transition-duration: 100ms;
+  transition: opacity $transition-duration linear,
+              visibility $transition-duration;
 
+  .photo-gallery_is-enabled & {
+    display: inline-block;
+  }
+
+}
+
+
+.photo-gallery_is-first-photo .photo-gallery_control-previous,
+.photo-gallery_is-last-photo .photo-gallery_control-next  {
+  visibility: hidden;
+  opacity: 0;
 }
 
 

@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   const PHOTO_GALLERY_CSS_CLASS = "photo-gallery";
+  const PHOTO_GALLERY_ENABLED_CSS_CLASS = "photo-gallery_is-enabled";
+  const PHOTO_GALLERY_FIRST_PHOTO_CSS_CLASS = "photo-gallery_is-first-photo";
+  const PHOTO_GALLERY_LAST_PHOTO_CSS_CLASS = "photo-gallery_is-last-photo";
   const PHOTO_LIST_CSS_CLASS = "photo-gallery_photo-list";
   const CONTROL_PREVIOUS_CSS_CLASS = "photo-gallery_control-previous";
   const CONTROL_NEXT_CSS_CLASS = "photo-gallery_control-next";
@@ -74,11 +77,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (galleryPosition < gallerySize - 1) {
           incrementPositionPx(photoList, "left", -gallery.offsetWidth);
           if (galleryPosition === 0) {
-            controlPrevious.style.display = "inline-block";
+            gallery.classList.remove(PHOTO_GALLERY_FIRST_PHOTO_CSS_CLASS);
           }
           galleryPosition += 1;
           if (galleryPosition === gallerySize - 1) {
-            controlNext.style.display = "none";
+            gallery.classList.add(PHOTO_GALLERY_LAST_PHOTO_CSS_CLASS)
           }
         }
       }
@@ -87,17 +90,18 @@ document.addEventListener("DOMContentLoaded", function() {
         if (galleryPosition > 0) {
           incrementPositionPx(photoList, "left", gallery.offsetWidth);
           if (galleryPosition === gallerySize - 1) {
-            controlNext.style.display = "inline-block";
+            gallery.classList.remove(PHOTO_GALLERY_LAST_PHOTO_CSS_CLASS)
           }
           galleryPosition -= 1;
           if (galleryPosition === 0) {
-            controlPrevious.style.display = "none";
+            gallery.classList.add(PHOTO_GALLERY_FIRST_PHOTO_CSS_CLASS);
           }
         }
       }
 
       if (gallerySize > 0) {
-        controlNext.style.display = "inline-block";
+        gallery.classList.add(PHOTO_GALLERY_ENABLED_CSS_CLASS);
+        gallery.classList.add(PHOTO_GALLERY_FIRST_PHOTO_CSS_CLASS);
         controlNext.addEventListener("click", controlNextClicked);
         controlPrevious.addEventListener("click", controlPreviousClicked);
       }
