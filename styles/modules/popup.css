@@ -10,7 +10,11 @@
   color: #ffffff;
   background: url("../../images/people-icon.png") left 20px top 14px no-repeat #0a7f5d;
   font-weight: 300;
-  line-height: 1.25em; }
+  line-height: 1.25em;
+  transition: opacity 100ms linear, visibility 100ms; }
+  .popup.popup_is-closed {
+    visibility: hidden;
+    opacity: 0; }
 
 .popup_close {
   height: 16px;

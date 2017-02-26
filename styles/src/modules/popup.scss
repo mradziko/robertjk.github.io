@@ -3,6 +3,7 @@
 
 
 .popup {
+
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -16,6 +17,16 @@
               left 20px top 14px no-repeat #0a7f5d;
   font-weight: 300;
   line-height: 1.25em;
+
+  $transition-duration: 100ms;
+  transition: opacity $transition-duration linear,
+              visibility $transition-duration;
+
+  &.popup_is-closed {
+    visibility: hidden;
+    opacity: 0;
+  }
+
 }
 
 
