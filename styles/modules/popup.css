@@ -17,10 +17,17 @@
   width: 16px;
   border-radius: 8px;
   background: #11644b;
-  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 6px;
   right: 6px;
-  color: #45bd4f; }
+  color: #45bd4f;
+  font-size: 22rem; }
+
+.popup_close-cross {
+  position: relative;
+  top: -12px; }
 
 /*# sourceMappingURL=popup.css.map */

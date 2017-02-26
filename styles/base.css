@@ -60,4 +60,11 @@ hgroup {
 strong {
   font-weight: 600; }
 
+button {
+  border: none; }
+  button:hover {
+    cursor: pointer; }
+  button:focus {
+    outline: none; }
+
 /*# sourceMappingURL=base.css.map */

@@ -33,15 +33,10 @@
   display: none;
   position: absolute;
   top: calc(50% - 16px);
-  border: none;
   height: 32px;
   width: 32px;
   color: transparent;
   background: url("../../images/arrow-left.png") left center no-repeat; }
-  .photo-gallery_control:hover {
-    cursor: pointer; }
-  .photo-gallery_control:focus {
-    outline: none; }
 
 .photo-gallery_control-previous {
   left: 4px; }

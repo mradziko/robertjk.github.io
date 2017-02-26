@@ -74,3 +74,18 @@ hgroup {
 strong {
   font-weight: 600;
 }
+
+
+button {
+
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+}
