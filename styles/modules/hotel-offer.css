@@ -1,5 +1,6 @@
 /* A box presenting an offer from one of the hotels. */
 .hotel-offer {
+  display: inline-block;
   position: relative;
   /* To absolutely position the gallery. */
   box-sizing: border-box;
