@@ -25,7 +25,7 @@ $elements-spacing: 6px;
 /* Empty element that makes sure that the last row of the flexbox container is
    filled, so that the actually visible items nicely align to the left. */
 .boxed-list_element-dummy {
-  margin: 0 !important;
+  margin: 0 0 0 $elements-spacing !important;
   height: 0 !important;
   padding: 0 !important;
 }
