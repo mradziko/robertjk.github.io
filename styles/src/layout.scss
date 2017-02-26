@@ -2,8 +2,10 @@
 
 
 $header-height: 90px;
+$header-height-smaller-screens: 202px;
 $main-horizontal-padding: 157px;
 $main-horizontal-padding-small-screens: 60px;
+$popup-top-offset: 28px;
 
 
 .layout-body {
@@ -48,16 +50,22 @@ $main-horizontal-padding-small-screens: 60px;
 
 .layout-popup {
 
-  $top-offset: 28px;
-  $header-alternative-height: 202px;
 
   position: fixed;
   z-index: 1;
-  top: $top-offset + $header-height;
+  top: $popup-top-offset + $header-height;
   right: 17px;
+}
 
-  @media (max-width: $header-max-width-breakpoint) {
-    top: $top-offset + $header-alternative-height;
+
+@media (max-width: $header-max-width-breakpoint) {
+
+  .layout-body {
+    padding-top: $header-height-smaller-screens;
+  }
+
+  .layout-popup {
+    top: $popup-top-offset + $header-height-smaller-screens;
   }
 
 }

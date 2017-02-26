@@ -35,10 +35,13 @@
   z-index: 1;
   top: 118px;
   right: 17px; }
-  @media (max-width: 620px) {
-    .layout-popup {
-      top: 230px; } }
 
+@media (max-width: 620px) {
+  .layout-body {
+    padding-top: 202px; }
+
+  .layout-popup {
+    top: 230px; } }
 @media (max-width: 1150px) {
   .layout-main,
   .layout-page-footer,
