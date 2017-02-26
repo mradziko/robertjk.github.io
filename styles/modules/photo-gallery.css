@@ -29,6 +29,8 @@
 
 /* Controls which image to show. */
 .photo-gallery_control {
+  /* Hide by default and show only if JavaScript setups properly. */
+  display: none;
   position: absolute;
   top: calc(50% - 16px);
   border: none;

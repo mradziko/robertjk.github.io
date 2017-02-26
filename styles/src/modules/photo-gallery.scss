@@ -52,6 +52,8 @@ $control-spacing: 4px;
 
   $height: 32px;
 
+  /* Hide by default and show only if JavaScript setups properly. */
+  display: none;
   position: absolute;
   top: calc(50% - #{$height / 2});
   border: none;
