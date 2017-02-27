@@ -3,7 +3,6 @@
 
 
 .popup {
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -17,32 +16,17 @@
               left 20px top 14px no-repeat #0a7f5d;
   font-weight: 300;
   line-height: 1.25em;
-
-  $transition-duration: 100ms;
-  transition: opacity $transition-duration linear,
-              visibility $transition-duration;
-
-  &.popup_is-closed {
-    visibility: hidden;
-    opacity: 0;
-  }
-
 }
 
 
 .popup_close {
-
-  @include circle(8px, #11644b);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 6px;
   right: 6px;
-  color: #45bd4f;
-  font-size: 22rem;
-
+  width: 16px;
+  height: 16px;
+  color: transparent;
+  background: url("../#{$images-dir}/close-button.png") center center no-repeat;
 }
 
 

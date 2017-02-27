@@ -1,0 +1,13 @@
+.toggle-visibility {
+  transition: opacity 150ms linear visibility 150ms; }
+  .toggle-visibility.toggle-visibility_is-visible {
+    transition: opacity 150ms linear 1000ms, visibility 150ms 1000ms;
+    visibility: visible;
+    opacity: 1; }
+
+/* Element that will be hidden by deafult and faded into view after some time */
+.toggle-visibility_initially-hidden {
+  visibility: hidden;
+  opacity: 0; }
+
+/*# sourceMappingURL=toggle-visibility.css.map */

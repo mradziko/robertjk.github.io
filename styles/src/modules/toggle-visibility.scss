@@ -1,0 +1,23 @@
+.toggle-visibility {
+
+  $transition-duration: 150ms;
+  $transition-delay: 1000ms;
+
+  transition: opacity $transition-duration linear
+              visibility $transition-duration;
+
+  &.toggle-visibility_is-visible {
+    transition: opacity $transition-duration linear $transition-delay,
+                visibility $transition-duration $transition-delay;
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+
+
+/* Element that will be hidden by deafult and faded into view after some time */
+.toggle-visibility_initially-hidden {
+  visibility: hidden;
+  opacity: 0;
+}

@@ -10,25 +10,16 @@
   color: #ffffff;
   background: url("../../images/people-icon.png") left 20px top 14px no-repeat #0a7f5d;
   font-weight: 300;
-  line-height: 1.25em;
-  transition: opacity 100ms linear, visibility 100ms; }
-  .popup.popup_is-closed {
-    visibility: hidden;
-    opacity: 0; }
+  line-height: 1.25em; }
 
 .popup_close {
-  height: 16px;
-  width: 16px;
-  border-radius: 8px;
-  background: #11644b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 6px;
   right: 6px;
-  color: #45bd4f;
-  font-size: 22rem; }
+  width: 16px;
+  height: 16px;
+  color: transparent;
+  background: url("../../images/close-button.png") center center no-repeat; }
 
 .popup_close-cross {
   position: relative;

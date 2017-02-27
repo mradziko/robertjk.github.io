@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/modules/footer-popup.css" />
     <link rel="stylesheet" href="styles/modules/header.css" />
     <link rel="stylesheet" href="styles/modules/hotel-offer.css" />
+    <link rel="stylesheet" href="styles/modules/toggle-visibility.css" />
     <link rel="stylesheet" href="styles/modules/photo-gallery.css" />
     <link rel="stylesheet" href="styles/modules/popup.css" />
 
@@ -21,6 +22,7 @@
 
     <script src="scripts/api-example-response.js"></script>
     <script src="scripts/data-loader.js"></script>
+    <script src="scripts/toggle-visibility.js"></script>
     <script src="scripts/photo-gallery.js"></script>
     <script src="scripts/popup.js"></script>
   </head>
@@ -72,14 +74,14 @@
     </footer>
 
     <main class="layout-main">
-      <aside class="popup layout-popup">
+      <aside class="popup layout-popup toggle-visibility toggle-visibility_initially-hidden">
         <p>There are <span class="popup_people-number">20</span> people looking
           at this hotel right now</p>
         <!-- Cross mark character inside the button. -->
-        <button class="popup_close"><span class="popup_close-cross">&#10799;</span></button>
+        <button class="popup_close"><span class="popup_close-cross">Close</span></button>
       </aside>
 
-      <aside class="footer-popup layout-footer-popup">
+      <aside class="footer-popup layout-footer-popup toggle-visibility toggle-visibility_initially-hidden">
         <p class="footer-popup_content">Bus packages from Austin and Houston
           available with <strong>any hotel</strong>.</p>
       </aside>

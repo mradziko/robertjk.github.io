@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var POPUP_CSS_CLASS = "popup";
   var CLOSE_CSS_CLASS = "popup_close";
-  var POPUP_CLOSED_CSS_CLASS = "popup_is-closed";
+  var VISIBLE_CSS_CLASS = "toggle-visibility_is-visible";
   var PEOPLE_NUMBER_CSS_CLASS = "popup_people-number";
   var PEOPLE_NUMBER_MIN = 6;
   var PEOPLE_NUMBER_MAX = 20;
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   POPUP_CSS_CLASS);
     } else {
       closeControl.addEventListener("click", function() {
-        popup.classList.add(POPUP_CLOSED_CSS_CLASS);
+        popup.classList.remove(VISIBLE_CSS_CLASS);
       });
     }
   }
