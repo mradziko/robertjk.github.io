@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
   /* Process hotels data, selecting the images to be shown. The processing
      happens in-place (modifies the given data). */
   function processData(hotelsData) {
+    var tripAdvisorRating;
+    var cheapestRoom;
+    var oldPrice, currentPrice;
+
     Array.prototype.forEach.call(hotelsData, function(hotel) {
       Array.prototype.forEach.call(hotel.photos, function (photo) {
         if (photo.featured_thumbnail) {
@@ -49,9 +53,30 @@ document.addEventListener("DOMContentLoaded", function() {
           photo.photo_url = photo.main_photo;
         }
       });
-      var tripAdvisorRating = parseInt(hotel.tripadvisor_stars);
+
+      /* TripAdvisor information */
+      tripAdvisorRating = parseInt(hotel.tripadvisor_stars);
       hotel.tripadvisor_rating_stars = ratingStarsText(tripAdvisorRating);
       hotel.tripadvisor_rating_description = tripAdvisorRatingDescription(tripAdvisorRating);
+      hotel.directions.distance_km = (hotel.directions.distance / 1000).toFixed(1);
+
+      /* Price information */
+      // Find the cheapest room
+      cheapestRoom = Array.prototype.reduce.call(hotel.rooms, function(cheapest, current) {
+        if (current.retail_rate < cheapest.retail_rate) {
+          return current;
+        }
+        else {
+          return cheapest;
+        }
+      }); 
+      currentPrice = Math.round(cheapestRoom.total_price / 100);
+      oldPrice = Math.round(cheapestRoom.retail_rate / 100);
+      hotel.cheapest_price = {
+        current_price: currentPrice,
+        old_price: oldPrice,
+        discount: Math.round((oldPrice - currentPrice) / oldPrice * 100)
+      }
     });
   }
 

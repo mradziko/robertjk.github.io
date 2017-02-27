@@ -118,15 +118,15 @@
                   <div class="hotel-offer_heading">
                     <div class="hotel-offer_main-info">
                       <h3 class="hotel-offer_name">{{ name }}</h3>
-                      <p class="hotel-offer_distance">1.6 KM ➔ SMF</p>
+		      <p class="hotel-offer_distance">{{ directions.distance_km }} KM ➔ SMF</p>
                     </div>
                     <div class="hotel-offer_price">
-                      <span class="hotel-offer_price-old">$232</span>
-                      <span class="hotel-offer_price-new">$193</span>
+		      <span class="hotel-offer_price-old">{{ cheapest_price.old_price }}</span>
+		      <span class="hotel-offer_price-new">{{ cheapest_price.current_price }}</span>
                       <span class="hotel-offer_price-pricing">Nightly</span>
                     </div>
                   </div>
-                  <div class="hotel-offer_discount">-30%</div>
+		  <div class="hotel-offer_discount">-{{ cheapest_price.discount }}%</div>
                   <div class="hotel-offer_tripadvisor-info">
                     <p class="hotel-offer_tripadvisor-rating">
                       <span class="hotel-offer_tripadvisor-rating-stars">{{{ tripadvisor_rating_stars }}}</span>
