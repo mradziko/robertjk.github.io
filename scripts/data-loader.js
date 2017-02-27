@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  const DATA_API_URL = "https://smf.findor.com/api/v2/hotel/?checkIn=20170527&checkOut=20170529&checkin=20170527&checkout=20170529&contentDetails=all&freeCancel=true&locKeyword=Tampa,+US&locale=en_US&rateDetails=medium&room1=2,0&totalStrikeRate=true&unavailableHotels=false&unknownHotels=false";
-  const HOTEL_OFFERS_TEMPLATE_ID = "hotel-offers-template";
-  const HOTEL_OFFERS_CONTAINER_ID = "hotel-offers-hot";
+  var DATA_API_URL = "https://smf.findor.com/api/v2/hotel/?checkIn=20170527&checkOut=20170529&checkin=20170527&checkout=20170529&contentDetails=all&freeCancel=true&locKeyword=Tampa,+US&locale=en_US&rateDetails=medium&room1=2,0&totalStrikeRate=true&unavailableHotels=false&unknownHotels=false";
+  var HOTEL_OFFERS_TEMPLATE_ID = "hotel-offers-template";
+  var HOTEL_OFFERS_CONTAINER_ID = "hotel-offers-hot";
 
-  let hotelOffersTemplate = document.getElementById(HOTEL_OFFERS_TEMPLATE_ID).innerHTML;
-  let hotelOffersContainer = document.getElementById(HOTEL_OFFERS_CONTAINER_ID);
+  var hotelOffersTemplate = document.getElementById(HOTEL_OFFERS_TEMPLATE_ID).innerHTML;
+  var hotelOffersContainer = document.getElementById(HOTEL_OFFERS_CONTAINER_ID);
 
 
   /* Makes a request to API and renders the data if successful. */
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("onload");
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          let data = JSON.parse(xhr.responseText);
+          var data = JSON.parse(xhr.responseText);
           if (data) {
             processData(data);
             showHotelsDataOnPage(data);
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
           photo.photo_url = photo.main_photo;
         }
       });
-      let tripAdvisorRating = parseInt(hotel.tripadvisor_stars);
+      var tripAdvisorRating = parseInt(hotel.tripadvisor_stars);
       hotel.tripadvisor_rating_stars = ratingStarsText(tripAdvisorRating);
       hotel.tripadvisor_rating_description = tripAdvisorRatingDescription(tripAdvisorRating);
     });
@@ -57,18 +57,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   /* Retrns as many stars characters as given rating. */
-  let ratingStarsText = (function() {
-    const starCharacter = "&#9733;";
+  var ratingStarsText = (function() {
+    var STAR_CHARACTER = "&#9733;";
 
     return function(rating) {
-      return new Array(rating).join(starCharacter);
+      return new Array(rating).join(STAR_CHARACTER);
     }
   }());
 
 
   /* Returnins text description for rating given as argument. */
-  let tripAdvisorRatingDescription = (function() {
-    const ratingMap = {
+  var tripAdvisorRatingDescription = (function() {
+    var RATING_MAP = {
       1: "Terrible",
       2: "Poor",
       3: "Average",
@@ -77,14 +77,14 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     return function(rating) {
-      return ratingMap[rating];
+      return RATING_MAP[rating];
     }
   }());
 
 
   /* Uses data to fill the elements on the page. */
   function showHotelsDataOnPage(hotelsData) {
-    let hotelOffersHTML = Mustache.render(hotelOffersTemplate, {
+    var hotelOffersHTML = Mustache.render(hotelOffersTemplate, {
       hotels: hotelsData,
     });
     hotelOffersContainer.innerHTML = hotelOffersHTML;

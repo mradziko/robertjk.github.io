@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  const POPUP_CSS_CLASS = "popup";
-  const CLOSE_CSS_CLASS = "popup_close";
-  const POPUP_CLOSED_CSS_CLASS = "popup_is-closed";
-  const PEOPLE_NUMBER_CSS_CLASS = "popup_people-number";
-  const PEOPLE_NUMBER_MIN = 6;
-  const PEOPLE_NUMBER_MAX = 20;
+  var POPUP_CSS_CLASS = "popup";
+  var CLOSE_CSS_CLASS = "popup_close";
+  var POPUP_CLOSED_CSS_CLASS = "popup_is-closed";
+  var PEOPLE_NUMBER_CSS_CLASS = "popup_people-number";
+  var PEOPLE_NUMBER_MIN = 6;
+  var PEOPLE_NUMBER_MAX = 20;
 
-  let popups = document.getElementsByClassName(POPUP_CSS_CLASS);
-  let peopleNumbers = document.getElementsByClassName(PEOPLE_NUMBER_CSS_CLASS);
+  var popups = document.getElementsByClassName(POPUP_CSS_CLASS);
+  var peopleNumbers = document.getElementsByClassName(PEOPLE_NUMBER_CSS_CLASS);
 
 
   function setupPopup(popup) {
-    let closeControl = popup.getElementsByClassName(CLOSE_CSS_CLASS)[0];
+    var closeControl = popup.getElementsByClassName(CLOSE_CSS_CLASS)[0];
 
     if (!closeControl) {
       console.log("Unable to find ." + CLOSE_CSS_CLASS + " for ." +
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
   /* Populates people number container with random integer from defined
      range. */
   function setupPeopleNumber(peopleNumber) {
-    let randomNumber = Math.random() * (PEOPLE_NUMBER_MAX - PEOPLE_NUMBER_MIN + 1);
+    var randomNumber = Math.random() * (PEOPLE_NUMBER_MAX - PEOPLE_NUMBER_MIN + 1);
     randomNumber = Math.floor(randomNumber) + PEOPLE_NUMBER_MIN;
     peopleNumber.innerHTML = randomNumber.toString();
   }
