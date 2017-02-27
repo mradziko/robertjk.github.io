@@ -32,7 +32,8 @@
 @media (max-width: 500px) {
   .footer-popup {
     padding-top: 14px;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    font-size: 20rem; }
 
   .footer-popup_content {
     top: 0; } }
