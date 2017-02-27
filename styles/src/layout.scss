@@ -57,12 +57,16 @@ $popup-top-offset: 28px;
 
 @media (max-width: $header-max-width-breakpoint) {
 
+  .layout-header {
+    position: static;
+  }
+
   .layout-body {
-    padding-top: $header-height-smaller-screens;
+    padding-top: 0;
   }
 
   .layout-popup {
-    top: $popup-top-offset + $header-height-smaller-screens;
+    top: $popup-top-offset;
   }
 
 }

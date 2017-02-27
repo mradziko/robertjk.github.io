@@ -36,11 +36,14 @@
   right: 17px; }
 
 @media (max-width: 620px) {
+  .layout-header {
+    position: static; }
+
   .layout-body {
-    padding-top: 144px; }
+    padding-top: 0; }
 
   .layout-popup {
-    top: 172px; } }
+    top: 28px; } }
 @media (max-width: 500px) {
   .layout-page-footer {
     padding-bottom: 150px; } }
