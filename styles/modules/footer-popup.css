@@ -31,8 +31,8 @@
 
 @media (max-width: 500px) {
   .footer-popup {
-    padding-top: 20px;
-    padding-bottom: 21px; }
+    padding-top: 14px;
+    padding-bottom: 15px; }
 
   .footer-popup_content {
     top: 0; } }
