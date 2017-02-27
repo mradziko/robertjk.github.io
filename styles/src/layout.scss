@@ -2,7 +2,7 @@
 
 
 $header-height: 90px;
-$header-height-smaller-screens: 202px;
+$header-height-smaller-screens: 144px;
 $main-horizontal-padding: 157px;
 $main-horizontal-padding-small-screens: 60px;
 $popup-top-offset: 28px;
@@ -70,7 +70,7 @@ $popup-top-offset: 28px;
 @media (max-width: $footer-popup-max-width-breakpoint) {
 
   .layout-page-footer {
-    padding-bottom: 220px;
+    padding-bottom: 150px;
   }
 
 }

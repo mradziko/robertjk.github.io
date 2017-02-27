@@ -60,14 +60,19 @@
     align-items: flex-start;
     height: auto;
     padding: {
-      top: 25px;
-      bottom: 25px;
-    }
+      top: 1kpx;
+      bottom: 10px;
+    };
+    font-size: 18rem;
+  }
+
+  .header_logo {
+    margin-bottom: -6px;
   }
 
   .header_link {
     width: 100%;
-    margin: 8px 0 0 0 !important;
+    margin: 6px 0 0 0 !important;
     padding-left: 0 !important;
     background-image: none !important;
   }

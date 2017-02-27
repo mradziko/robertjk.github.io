@@ -4,7 +4,6 @@
 @import "shared";
 
 
-$padding-top: 45px;
 $image-width: 100px;
 $image-height: 39px;
 
@@ -17,7 +16,7 @@ $image-height: 39px;
   justify-content: center;
   align-items: center;
   padding: {
-    top: $padding-top;
+    top: 45px;
     bottom: 46px;
   }
   background: #228570;
@@ -52,15 +51,24 @@ $image-height: 39px;
 
 @media (max-width: $footer-popup-max-width-breakpoint) {
 
-  $image-offset: $image-height + 5px;
-
   .footer-popup {
-    padding-top: $padding-top + $image-offset;
+    padding: {
+      top: 20px;
+      bottom: 21px;
+    }
   }
 
-  .footer-popup_content::before {
-    top: -$image-offset;
-    left: calc(50% - #{$image-width / 2});
+  .footer-popup_content {
+    top: 0;
   }
+
+}
+
+
+@media (max-width: 1100px) {
+
+    .footer-popup_content::before {
+      display: none;
+    }
 
 }

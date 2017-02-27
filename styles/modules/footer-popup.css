@@ -29,12 +29,15 @@
     height: 39px;
     background: url("../../images/bus-icon.png") left center no-repeat; }
 
-@media (max-width: 1100px) {
+@media (max-width: 500px) {
   .footer-popup {
-    padding-top: 89px; }
+    padding-top: 20px;
+    padding-bottom: 21px; }
 
+  .footer-popup_content {
+    top: 0; } }
+@media (max-width: 1100px) {
   .footer-popup_content::before {
-    top: -44px;
-    left: calc(50% - 50px); } }
+    display: none; } }
 
 /*# sourceMappingURL=footer-popup.css.map */

@@ -35,12 +35,16 @@
     flex-flow: column nowrap;
     align-items: flex-start;
     height: auto;
-    padding-top: 25px;
-    padding-bottom: 25px; }
+    padding-top: 1kpx;
+    padding-bottom: 10px;
+    font-size: 18rem; }
+
+  .header_logo {
+    margin-bottom: -6px; }
 
   .header_link {
     width: 100%;
-    margin: 8px 0 0 0 !important;
+    margin: 6px 0 0 0 !important;
     padding-left: 0 !important;
     background-image: none !important; } }
 
