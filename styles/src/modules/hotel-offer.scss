@@ -130,24 +130,36 @@ $gallery-height: 221px;
 }
 
 
+.hotel-offer_tripadvisor-rating {
+  margin: 0 0 3px 0;
+}
+
+
 .hotel-offer_tripadvisor-rating-stars {
   font-size: 12rem;
   letter-spacing: 0.1em;
 }
 
+
 .hotel-offer_tripadvisor-rating-description {
-  margin: 0 0 3px 2px;
+  margin: 0 0 0 2px;
 }
 
 
-.hotel-offer_tripadvisor-reviews-count {
-
+.hotel-offer_tripadvisor-reviews {
   width: 100%;
   padding: 0 0 0 24px;
   background: url("../#{$images-dir}/tripadvisor-icon.png") left center no-repeat;
+}
 
-  @media (max-width: 500px) {
-    margin-left: 12px;
+
+@media (max-width: 500px) {
+
+  .hotel-offer_tripadvisor-rating {
+    margin-right: 12px;
+  }
+
+  .hotel-offer_tripadvisor-reviews {
     width: auto;
   }
 

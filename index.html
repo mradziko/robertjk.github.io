@@ -128,9 +128,14 @@
                   </div>
                   <div class="hotel-offer_discount">-30%</div>
                   <div class="hotel-offer_tripadvisor-info">
-                    <span class="hotel-offer_tripadvisor-rating-stars">{{{ tripadvisor_rating_stars }}}</span>
-                    <span class="hotel-offer_tripadvisor-rating-description">{{ tripadvisor_rating_description }}</span>
-                    <span class="hotel-offer_tripadvisor-reviews-count">{{ tripadvisor_reviews_count }} reviews</span>
+                    <p class="hotel-offer_tripadvisor-rating">
+                      <span class="hotel-offer_tripadvisor-rating-stars">{{{ tripadvisor_rating_stars }}}</span>
+                      <span class="hotel-offer_tripadvisor-rating-description">{{ tripadvisor_rating_description }}</span>
+                    </p>
+                    <p class="hotel-offer_tripadvisor-reviews">
+                      <span class="hotel-offer_tripadvisor-reviews-percentage">{{ tripadvisor_reviews_percentage }} / 100</span>
+                      <span class="hotel-offer_tripadvisor-reviews-count">({{ tripadvisor_reviews_count }} reviews)</span>
+                    </p>
                   </div>
                 </a>
               </li>

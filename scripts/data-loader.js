@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  var DATA_API_URL = "https://smf.findor.com/api/v2/hotel/?checkIn=20170527&checkOut=20170529&checkin=20170527&checkout=20170529&contentDetails=all&freeCancel=true&locKeyword=Tampa,+US&locale=en_US&rateDetails=medium&room1=2,0&totalStrikeRate=true&unavailableHotels=false&unknownHotels=false";
+  var DATA_API_URL = "http://thingproxy.freeboard.io/fetch/https://smf.staging.findor.com/api/v2/hotel/?checkIn=20170527&checkOut=20170529&checkin=20170527&checkout=20170529&contentDetails=all&freeCancel=true&locKeyword=Tampa,+US&locale=en_US&rateDetails=medium&room1=2,0&totalStrikeRate=true&unavailableHotels=false&unknownHotels=false&include_directions=true";
   var HOTEL_OFFERS_TEMPLATE_ID = "hotel-offers-template";
   var HOTEL_OFFERS_CONTAINER_ID = "hotel-offers-hot";
 
