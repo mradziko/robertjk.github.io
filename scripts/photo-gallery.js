@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+var initializePhotoGallery = function() {
 
   var PHOTO_GALLERY_CSS_CLASS = "photo-gallery";
   var PHOTO_GALLERY_ENABLED_CSS_CLASS = "photo-gallery_is-enabled";
@@ -110,7 +110,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+
   /* Setup the galleries. */
   Array.prototype.forEach.call(photoGalleries, setupPhotoGallery);
 
-});
+};

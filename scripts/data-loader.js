@@ -1,27 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
+/* Callback is a function that will be called after the data finishes loading. */
+var initializeDataLoader = function(dataLoadedCallback) {
 
-  var DATA_API_URL = "http://thingproxy.freeboard.io/fetch/https://smf.staging.findor.com/api/v2/hotel/?checkIn=20170527&checkOut=20170529&checkin=20170527&checkout=20170529&contentDetails=all&freeCancel=true&locKeyword=Tampa,+US&locale=en_US&rateDetails=medium&room1=2,0&totalStrikeRate=true&unavailableHotels=false&unknownHotels=false&include_directions=true";
+  var DATA_API_URL = "https://smf.staging.findor.com/api/v2/hotel/?checkin=20170527&checkout=20170529&contentDetails=all&freeCancel=true&locKeyword=Tampa,+US&locale=en_US&rateDetails=medium&room1=2,0&totalStrikeRate=true&unavailableHotels=false&unknownHotels=false&include_directions=true";
+
   var HOTEL_OFFERS_TEMPLATE_ID = "hotel-offers-template";
   var HOTEL_OFFERS_CONTAINER_ID = "hotel-offers-hot";
 
   var hotelOffersTemplate = document.getElementById(HOTEL_OFFERS_TEMPLATE_ID).innerHTML;
   var hotelOffersContainer = document.getElementById(HOTEL_OFFERS_CONTAINER_ID);
+  var data;
 
 
-  /* Makes a request to API and renders the data if successful. */
-  function grabHotelsData() {
-    xhr = new XMLHttpRequest();
+  /* Makes a request to API and fetches the data. If the request is
+     successfull, executes the callback passing the data as it's
+     only argument. */
+  function fetchData(successCallback) {
+    var xhr = new XMLHttpRequest();
     xhr.open("GET", DATA_API_URL, true);
-    // xhr.setRequestHeader("Content-type", "application/json");
-    xhr.responseType = "json";
     xhr.onload = function() {
-      console.log("onload");
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           var data = JSON.parse(xhr.responseText);
           if (data) {
-            processData(data);
-            showHotelsDataOnPage(data);
+            successCallback(data);
           } else {
             console.error("API request for data returned empty data");
           }
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   /* Uses data to fill the elements on the page. */
-  function showHotelsDataOnPage(hotelsData) {
+  function showDataOnPage(hotelsData) {
     var hotelOffersHTML = Mustache.render(hotelOffersTemplate, {
       hotels: hotelsData,
     });
@@ -116,9 +117,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
-  // grabHotelsData();
-  // TODO: Remove the example data and make a real API call.
-  processData(apiResponseExample);
-  showHotelsDataOnPage(apiResponseExample);
+  fetchData(function(data) {
+    processData(data);
+    showDataOnPage(data);
+    dataLoadedCallback();
+  });
 
-});
+};

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+var initializeToggleVisibility = function() {
 
   var INITIALLY_HIDDEN_CSS_CLASS = "toggle-visibility_initially-hidden";
   var IS_VISIBLE_CLASS = "toggle-visibility_is-visible";
@@ -12,4 +12,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }, 100);
 
-});
+};

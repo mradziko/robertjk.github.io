@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+var initializePopup = function() {
 
   var POPUP_CSS_CLASS = "popup";
   var CLOSE_CSS_CLASS = "popup_close";
@@ -37,4 +37,4 @@ document.addEventListener("DOMContentLoaded", function() {
   Array.prototype.forEach.call(popups, setupPopup);
   Array.prototype.forEach.call(peopleNumbers, setupPeopleNumber);
 
-});
+};
