@@ -33,7 +33,8 @@
   position: fixed;
   z-index: 1;
   top: 118px;
-  right: 17px; }
+  right: 17px;
+  margin-left: 17px; }
 
 @media (max-width: 620px) {
   .layout-header {
@@ -48,10 +49,18 @@
   .layout-page-footer {
     padding-bottom: 150px; } }
 @media (max-width: 1150px) {
+  /* Decrease the main content padding */
   .layout-main,
   .layout-page-footer,
   .layout-footer-popup {
     padding-left: 6%;
     padding-right: 6%; } }
+@media (max-width: 500px) {
+  .layout-popup {
+    right: 0;
+    left: 0;
+    max-width: none !important;
+    margin-left: 17px;
+    margin-right: 17px; } }
 
 /*# sourceMappingURL=layout.css.map */

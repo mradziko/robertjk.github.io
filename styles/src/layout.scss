@@ -6,7 +6,7 @@ $header-height-smaller-screens: 144px;
 $main-horizontal-padding: 157px;
 $main-horizontal-padding-small-screens: 6%;
 $popup-top-offset: 28px;
-$popup-right-offset: 17px;
+$popup-horizontal-offset: 17px;
 
 
 .layout-body {
@@ -52,7 +52,8 @@ $popup-right-offset: 17px;
   position: fixed;
   z-index: 1;
   top: $popup-top-offset + $header-height;
-  right: $popup-right-offset;
+  right: $popup-horizontal-offset;
+  margin-left: 17px;
 }
 
 
@@ -83,11 +84,26 @@ $popup-right-offset: 17px;
 
 @media (max-width: 1150px) {
 
+  /* Decrease the main content padding */
   .layout-main,
   .layout-page-footer,
   .layout-footer-popup {
     padding-left: $main-horizontal-padding-small-screens;
     padding-right: $main-horizontal-padding-small-screens;
+  }
+
+}
+
+@media (max-width: 500px) {
+  
+  .layout-popup {
+    right: 0;
+    left: 0;
+    max-width: none !important;
+    margin: {
+      left: $popup-horizontal-offset;
+      right: $popup-horizontal-offset;
+    }
   }
 
 }
