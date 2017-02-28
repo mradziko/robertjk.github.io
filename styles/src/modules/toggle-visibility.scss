@@ -1,14 +1,17 @@
 .toggle-visibility {
 
-  $transition-duration: 150ms;
-  $transition-delay: 1000ms;
+  $duration: 150ms;
+  $delay: 1000ms;
+  $timing: linear;
 
-  transition: opacity $transition-duration linear
-              visibility $transition-duration;
+  transition: opacity $duration $timing,
+              visibility $duration $timing;
 
   &.toggle-visibility_is-visible {
-    transition: opacity $transition-duration linear $transition-delay,
-                visibility $transition-duration $transition-delay;
+    /* Transition declared again so that the delay is active only when
+       fading in */
+    transition: opacity $duration $timing $delay,
+                visibility $duration $timing $delay;
     visibility: visible;
     opacity: 1;
   }
