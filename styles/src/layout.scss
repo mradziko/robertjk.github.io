@@ -4,8 +4,9 @@
 $header-height: 90px;
 $header-height-smaller-screens: 144px;
 $main-horizontal-padding: 157px;
-$main-horizontal-padding-small-screens: 60px;
+$main-horizontal-padding-small-screens: 6%;
 $popup-top-offset: 28px;
+$popup-right-offset: 17px;
 
 
 .layout-body {
@@ -51,7 +52,7 @@ $popup-top-offset: 28px;
   position: fixed;
   z-index: 1;
   top: $popup-top-offset + $header-height;
-  right: 17px;
+  right: $popup-right-offset;
 }
 
 

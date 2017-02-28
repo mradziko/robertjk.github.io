@@ -8,7 +8,8 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 343px;
+  max-width: 343px;
+  min-height: 62px;
   padding: 13px 40px 16px 85px;
   border-radius: 10px;
   color: #ffffff;
