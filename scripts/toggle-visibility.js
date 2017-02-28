@@ -1,3 +1,6 @@
+"use strict";
+
+
 var initializeToggleVisibility = function() {
 
   var INITIALLY_HIDDEN_CSS_CLASS = "toggle-visibility_initially-hidden";

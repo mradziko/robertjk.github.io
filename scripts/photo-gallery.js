@@ -1,3 +1,6 @@
+"use strict";
+
+
 var initializePhotoGallery = function() {
 
   var PHOTO_GALLERY_CSS_CLASS = "photo-gallery";

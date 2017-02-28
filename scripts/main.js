@@ -1,3 +1,6 @@
+"use strict";
+
+
 /* Initializes all modules. */
 document.addEventListener("DOMContentLoaded", function() {
   initializePopup();

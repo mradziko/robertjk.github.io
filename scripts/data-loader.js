@@ -1,3 +1,6 @@
+"use strict";
+
+
 /* Callback is a function that will be called after the data finishes loading. */
 var initializeDataLoader = function(dataLoadedCallback) {
 

@@ -1,3 +1,6 @@
+"use strict";
+
+
 var initializePopup = function() {
 
   var POPUP_CSS_CLASS = "popup";
